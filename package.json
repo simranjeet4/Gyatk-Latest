@@ -1,0 +1,14 @@
+{
+  "name": "gyatk-fullstack",
+  "version": "1.0.0",
+  "description": "GYATK Deep-Tech Website & Blog CMS - React + Node.js",
+  "scripts": {
+    "server": "cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server/server.js"
+  },
+  "keywords": ["gyatk", "rvcr", "react", "node", "climate-tech"],
+  "author": "GYATK",
+  "license": "ISC"
+}

@@ -1,0 +1,547 @@
+.rvcr-market-page-root {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* Base Sections */
+.market-section {
+  padding: 70px 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #003461;
+  margin-bottom: 20px;
+}
+
+/* 1. Hero Section matching reference screenshot */
+.market-hero-section {
+  position: relative;
+  background-color: #002244;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.market-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero-left-content {
+  flex: 1;
+  max-width: 520px;
+  padding: 40px 0;
+  z-index: 2;
+}
+
+.hero-tag {
+  color: #e11d48;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero-main-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.hero-desc {
+  font-size: 1.025rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.hero-right-banner {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.hero-angled-img {
+  max-height: 380px;
+  width: auto;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* 2. Overview Section */
+.overview-2col-row {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.overview-engine-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.overview-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.overview-full-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.heads-card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 28px 32px;
+  margin-top: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.heads-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.heads-3col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.head-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.head-check-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #003461;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reporting-note {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 24px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* 3. Creating Newer Markets */
+.newer-markets-2col {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.newer-infographic-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.newer-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* 4. The Market Blueprint Banner */
+.the-market-banner {
+  background-color: #001630;
+  background-image: url('/images/strategy-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.banner-sub {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 5. RVCR Market Graph */
+.graph-2col-row {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 40px;
+}
+
+.graph-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.graph-stock-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 6. Dual Cards Pink Section */
+.dual-cards-pink-section {
+  background-color: #fcf4ff;
+  padding: 70px 0;
+}
+
+.dual-cards-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.dual-card {
+  border-radius: 14px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.dark-blue-card {
+  background-color: #002b5c;
+}
+
+.light-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.card-header-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.dark-text {
+  color: #0f172a;
+}
+
+.tree-group {
+  margin-bottom: 20px;
+}
+
+.tree-h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tree-ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.tree-ul li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+.card-footer-note {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 24px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* 7. Green Engines Section */
+.green-engines-2col {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  align-items: center;
+  gap: 40px;
+}
+
+.green-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.green-fuel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* 8. Pumps Section */
+.pumps-2col {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.pumps-hydraulic-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pumps-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+/* 9. OEM Dark Banner */
+.oem-dark-banner {
+  position: relative;
+  background-color: #0f172a;
+  background-image: url('/images/multiethnic-team-sharing-ideas-about-industrial-project-using-two-monitors-with-d-gears-metalic.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.oem-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  z-index: 1;
+}
+
+.oem-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.oem-banner-text {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 10. Power Gen Section */
+.power-gen-2col {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.power-gen-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.power-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.summary-title-h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #003461;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+/* Responsive queries */
+@media (max-width: 992px) {
+  .market-hero-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .hero-right-banner {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-angled-img {
+    max-height: 260px;
+  }
+
+  .overview-2col-row,
+  .newer-markets-2col,
+  .graph-2col-row,
+  .dual-cards-flex,
+  .green-engines-2col,
+  .pumps-2col,
+  .power-gen-2col {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .heads-3col-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Enhanced Section Tags */
+.section-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.green-tag {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.blue-tag {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+/* Media Card Frame for crisp image presentation */
+.media-card-frame {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.media-card-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* 7. Green Engines Section */
+.green-engines-section {
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+
+.green-engines-2col {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 48px;
+}
+
+.green-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.green-fuel-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 8. Pumps Section */
+.pumps-section {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 70px 0;
+}
+
+.pumps-2col {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.pumps-hydraulic-img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.pumps-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}

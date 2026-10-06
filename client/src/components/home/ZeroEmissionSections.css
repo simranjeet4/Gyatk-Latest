@@ -1,0 +1,712 @@
+﻿/* ==========================================================================
+   ZERO EMISSION / ABOUT US HOMEPAGE SECTIONS CSS (100% MATCH TO gyatk.com/zero-emission-technology/)
+   ========================================================================== */
+
+/* 1. Hero Banner */
+.ze-hero-banner {
+  position: relative;
+  background-color: transparent;
+  background-image: radial-gradient(at center center, #00A9EA 0%, #00306A 100%);
+  padding: 50px 0 65px 0;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.ze-hero-particles {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.ze-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.ze-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ze-hero-title-main {
+  font-family: var(--font-gyat);
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.ze-hero-spacer {
+  height: 25px;
+}
+
+.ze-hero-title-sub {
+  font-family: var(--font-gyat);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ze-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Orbit Stage */
+.ze-hero-orbit-stage {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ze-bubble-orb {
+  position: relative;
+  z-index: 5;
+  width: 280px;
+  height: 280px;
+  background-image: url('/images/bubble.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ze-bubble-logo {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.25));
+}
+
+/* Orbiting Spheres & Keyframes */
+.ze-orbit-ball {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ze-ball-img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.ze-orbit-ball.mving1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: zeOving 12s linear infinite;
+}
+
+@keyframes zeOving {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+.ze-orbit-ball.drive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s zeEne ease-in-out -4s infinite;
+  opacity: 0;
+}
+
+@keyframes zeEne {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+.ze-orbit-ball.power {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s -8s zePow ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes zePow {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+/* 2. Creating Newer Markets */
+.ze-markets-section {
+  background-color: #FFFFFF;
+  padding: 60px 0;
+}
+
+.ze-markets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.ze-title-navy {
+  font-family: var(--font-gyat);
+  font-size: 32px;
+  font-weight: 300;
+  color: #003461;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.ze-markets-text p {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+/* 3. Team & Leadership (50% - 50% Grid Split) */
+.ze-team-section-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #FFFFFF;
+}
+
+.ze-team-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+}
+
+.ze-team-img-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ze-team-info-full {
+  padding: 48px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.ze-team-title {
+  font-family: var(--font-gyat);
+  font-size: 32px;
+  font-weight: 300;
+  color: #003461;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+
+.ze-team-desc {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.ze-focus-title {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.ze-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ze-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.ze-check-icon {
+  color: #003461;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* 4. Checkerboard Grid (3 Rows x 2 Cols matching gyatk.com) */
+.ze-checkerboard-section {
+  width: 100%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.ze-cb-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 250px;
+}
+
+.ze-cb-cell-text {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.ze-cb-cell-img {
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 50px;
+  min-height: 250px;
+  box-sizing: border-box;
+}
+
+.ze-cb-sketch {
+  max-height: 400px;
+  max-width: 520px;
+  width: 100%;
+  height: 375px;
+  object-fit: contain;
+  display: block;
+}
+
+.ze-cb-vision {
+  background-color: #96337B;
+}
+
+.ze-cb-mission {
+  background-color: #003461;
+}
+
+.ze-cb-strength {
+  background-color: #0284c7;
+}
+
+.ze-cb-title {
+  font-family: var(--font-gyat);
+  font-size: 36px;
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.ze-cb-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ze-cb-bullet-item {
+  position: relative;
+  padding-left: 20px;
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.ze-cb-bullet-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.ze-cb-p {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.65;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* 5. Our Business Operations */
+.ze-operations-section {
+  background-color: #FFFFFF;
+  padding: 75px 0 50px 0;
+}
+
+.ze-operations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.ze-operations-section .ze-check-item {
+  font-family: var(--font-gyat);
+  font-size: 18px;
+  line-height: 1.4;
+  color: #003461;
+  margin-bottom: 14px;
+}
+
+/* 6. Climate Change Mitigation */
+.ze-climate-section {
+  background-color: #FFFFFF;
+  padding: 45px 0 60px 0;
+}
+
+.ze-climate-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.ze-climate-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.ze-climate-text p {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.ze-climate-full-note {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-top: 15px;
+}
+
+/* 7. Raison d'être */
+.ze-raison-section {
+  background-color: #FFFFFF;
+  padding: 50px 0 75px 0;
+}
+
+.ze-raison-text p {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.ze-raison-sub {
+  font-family: var(--font-gyat);
+  font-size: 18px;
+  font-weight: 500;
+  color: #003461;
+  margin: 24px 0 16px 0;
+}
+
+.ze-raison-section .ze-check-item {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.ze-raison-summary p {
+  font-family: var(--font-gyat);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+/* 8. Blue Sky & Green Earth Banner */
+.ze-sky-banner-section {
+  position: relative;
+  background-image: url('/images/blue-sky.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 240px;
+  margin-top: 200px;
+  margin-bottom: 70px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.ze-sky-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.ze-sky-heading {
+  font-family: var(--font-gyat);
+  font-size: 30px;
+  font-weight: 300;
+  color: #003461;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.ze-sky-earth-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.ze-sky-earth-img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -160px;
+  filter: drop-shadow(0 10px 20px rgba(0, 52, 97, 0.15));
+}
+
+/* 9. Philosophy & The Motto Cards */
+.ze-philosophy-section {
+  background-color: #FFFFFF;
+  padding: 65px 0 45px 0;
+}
+
+.ze-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ze-quote-card {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 35px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ze-card-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.ze-card-title {
+  font-family: var(--font-gyat);
+  font-size: 24px;
+  font-weight: 500;
+  color: #003461;
+  margin-bottom: 12px;
+}
+
+.ze-card-quote {
+  font-family: var(--font-gyat);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* 10. Tagline Section */
+.ze-tagline-section {
+  background-color: #FFFFFF;
+  padding: 10px 0 60px 0;
+  text-align: center;
+}
+
+.ze-tagline-quote {
+  font-family: var(--font-gyat);
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #003461;
+  max-width: 900px;
+  margin: 0 auto 16px auto;
+}
+
+.ze-tagline-text {
+  font-family: var(--font-gyat);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #475569;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ze-hero-container,
+  .ze-markets-grid,
+  .ze-team-grid,
+  .ze-team-section-full,
+  .ze-operations-grid,
+  .ze-climate-top-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .ze-team-info-full {
+    padding: 30px 20px;
+  }
+  .ze-cb-row {
+    grid-template-columns: 1fr;
+  }
+  .ze-cb-cell-text {
+    padding: 35px 25px;
+  }
+  .ze-cb-sketch {
+    height: 220px;
+    max-height: 260px;
+  }
+  .ze-sky-banner-section {
+    margin-top: 130px;
+    margin-bottom: 40px;
+    padding: 30px 0 40px 0;
+    min-height: auto;
+  }
+  .ze-sky-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+  }
+  .ze-sky-text-left,
+  .ze-sky-text-right {
+    justify-self: center;
+    text-align: center;
+  }
+  .ze-sky-earth-img {
+    width: 240px;
+    margin-top: -110px;
+  }
+  .ze-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

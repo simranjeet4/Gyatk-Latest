@@ -1,0 +1,41 @@
+﻿:root {
+  /* Exact GYATK Brand Colors & Spectrum Gradient (Light GYAT -> Medium RVCR -> Dark KGYAT) */
+  --color-gyat-light: #eef7ff;        /* GYAT Investor Hub Lightest Blue */
+  --color-gyat-ice: #e0f2fe;          /* GYAT Ice Accent Blue */
+  --color-rvcr-medium: #00a9ea;       /* RVCR Kinematic Tech Medium Cyan/Blue */
+  --color-kgyat-dark: #003461;        /* KGYAT Industrial Dark Navy */
+  
+  --color-primary-navy: #003461;      /* Deep Blue --e-global-color-d04f5fe */
+  --color-accent-purple: #96337B;     /* Purple / Magenta --e-global-color-3f34bbc */
+  --color-cyan: #00A9EA;              /* Hero center radial cyan */
+  --color-dark-blue: #00306A;         /* Hero outer radial blue */
+  --color-text-gray: #7A7A7A;         /* --e-global-color-text */
+  --color-text-dark: #1e293b;
+  --color-border-light: #E8E7EF;
+  --color-footer-bg: #202020;
+
+  /* Lightest blue for GYAT homepage & investor sections */
+  --color-lightest-blue: #eef7ff;
+  --color-gyat-bg: #eef7ff;
+
+  /* Button Gradients */
+  --gradient-btn: linear-gradient(to right, #cc2b5e 0%, #753a88 51%, #cc2b5e 100%);
+  --gradient-hero: radial-gradient(at center center, #00A9EA 0%, #00306A 100%);
+  --gradient-gyat-spectrum: linear-gradient(135deg, #eef7ff 0%, #e0f2fe 50%, #00a9ea 100%);
+
+  /* Refined IBM Plex Sans Typography for GYAT Investor/Commercialization Focus */
+  --font-gyat: 'IBM Plex Sans', 'Source Sans Pro', 'Roboto', sans-serif;
+  --font-heading: 'IBM Plex Sans', 'Roboto', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Nunito', sans-serif;
+  --font-sub: 'IBM Plex Sans', 'Roboto', sans-serif;
+
+  /* Font Weight Progression for Investor Focus */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Layout */
+  --container-width: 1140px;
+  --header-bg: #ffffff;
+}

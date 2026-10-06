@@ -1,0 +1,330 @@
+.strategic-page-root {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* 1. Hero Section */
+.strategic-hero {
+  position: relative;
+  background-color: #001630;
+  background-image: url('/images/strategy-banner.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0 80px 0;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.strategic-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 30, 61, 0.45) 0%, rgba(0, 15, 35, 0.85) 100%);
+  z-index: 1;
+}
+
+.strategic-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.strategic-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.strategic-hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Base Sections */
+.strategic-section {
+  padding: 60px 0;
+}
+
+.strategic-heading-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #003461;
+  margin-bottom: 20px;
+}
+
+/* 2. Overview Section */
+.strategic-overview-section {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.strategic-overview-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.zero-carbon-logo-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.overview-lead-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #003461;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 3. Background Section */
+.strategic-background-section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.strategic-background-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.background-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.highlight-p {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.background-transition-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* 4. Blue Callout Banner */
+.strategic-callout-section {
+  padding: 20px 0 50px 0;
+}
+
+.callout-banner-card {
+  background: linear-gradient(135deg, #003461 0%, #0f172a 100%);
+  border-radius: 12px;
+  padding: 36px 32px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 52, 97, 0.2);
+}
+
+.callout-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.callout-sub {
+  font-size: 1.05rem;
+  color: #38bdf8;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 5. Advantages 2x2 Grid */
+.strategic-advantages-grid-section {
+  padding: 40px 0 70px 0;
+}
+
+.advantages-2col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.adv-block {
+  margin-bottom: 36px;
+}
+
+.adv-block-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.adv-block-text {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+/* 6. Competitive Advantage Section */
+.competitive-advantage-section {
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 70px 0;
+}
+
+.main-comp-title {
+  margin-bottom: 40px;
+}
+
+.comp-item-row {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.comp-item-row.no-media {
+  grid-template-columns: 1fr;
+}
+
+.comp-item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comp-item-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.comp-item-text {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: #334155;
+  margin: 0;
+}
+
+/* 7. Pre-emptive Section (Pre-emitive-product.jpg as background image) */
+.preemptive-section {
+  position: relative;
+  background-color: #001630;
+  background-image: url('/images/Pre-emitive-product.jpg');
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 85px 0;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.preemptive-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.preemptive-content-wrap {
+  max-width: 600px;
+  background: rgba(0, 26, 54, 0.88);
+  padding: 44px 48px;
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preemptive-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.preemptive-text {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* 8. Leapfrogging Section */
+.leapfrogging-section {
+  padding: 80px 0;
+}
+
+.leapfrogging-header-box {
+  background-color: #003461;
+  border-radius: 8px;
+  padding: 16px 28px;
+  display: inline-block;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 14px rgba(0, 52, 97, 0.2);
+}
+
+.leapfrogging-box-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.leapfrogging-body-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+/* Responsive queries */
+@media (max-width: 992px) {
+  .strategic-overview-container,
+  .strategic-background-container,
+  .advantages-2col-grid,
+  .comp-item-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .preemptive-container {
+    justify-content: center;
+  }
+
+  .preemptive-content-wrap {
+    max-width: 100%;
+  }
+
+  .strategic-hero-title {
+    font-size: 2.15rem;
+  }
+}

@@ -1,0 +1,397 @@
+.proposition-page-root {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* Base Sections */
+.proposition-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #003461;
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+/* Check lists */
+.prop-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prop-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 1.025rem;
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+.prop-check-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+/* 1. Hero Section */
+.proposition-hero {
+  position: relative;
+  background-color: #001630;
+  background-image: url('/images/strategy-banner.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0 60px 0;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.proposition-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0, 30, 61, 0.4) 0%, rgba(0, 15, 35, 0.82) 100%);
+  z-index: 1;
+}
+
+.proposition-hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.proposition-hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #003461;
+  margin: 0;
+  background: #ffffff;
+  padding: 16px 28px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-media-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-shaft-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+}
+
+.hero-accent-badge {
+  background-color: #003461;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Lead Section */
+.proposition-lead-section {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.lead-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.lead-body-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+}
+
+/* 3. RVCR - The Next Evolutionary Leap */
+.proposition-leap-section {
+  padding: 40px 0 70px 0;
+}
+
+.leap-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.leap-col-right {
+  display: flex;
+  align-items: center;
+}
+
+.leap-card-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.leap-card-lead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #003461;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* 4. Formula Section */
+.proposition-formula-section {
+  padding: 20px 0 70px 0;
+}
+
+.formula-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.formula-intro-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  max-width: 960px;
+  margin: 0 auto 36px auto;
+}
+
+.formula-flow-container {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.formula-flowchart-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* 5. Three Color-Block Rows */
+.proposition-blocks-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.color-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 380px;
+}
+
+.row-content-col {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.bg-purple {
+  background-color: #801854;
+}
+
+.bg-darkblue {
+  background-color: #003461;
+}
+
+.bg-lightblue {
+  background-color: #0284c7;
+}
+
+.row-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.row-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+}
+
+.row-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.row-check-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.row-check-list.mt-top {
+  margin-top: 16px;
+}
+
+.row-icon {
+  flex-shrink: 0;
+}
+
+.row-media-col {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.split-2-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  background-color: #0f172a;
+}
+
+.row-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row-img-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 6. Applications Section */
+.applications-section {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 70px 0;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.main-app-title {
+  margin: 0;
+}
+
+.app-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+}
+
+/* 7. GYATK Reach Section */
+.gyatk-reach-section {
+  padding: 80px 0;
+}
+
+.gyatk-subtitle-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.gyatk-reach-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.reach-map-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.focus-area-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.reach-conclude-p {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-top: 24px;
+}
+
+/* Responsive queries */
+@media (max-width: 992px) {
+  .proposition-hero-container,
+  .leap-grid,
+  .color-row,
+  .applications-grid,
+  .gyatk-reach-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .color-row.reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .row-content-col {
+    padding: 48px 32px;
+  }
+
+  .proposition-hero-title {
+    font-size: 2.15rem;
+  }
+}

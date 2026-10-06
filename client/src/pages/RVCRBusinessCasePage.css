@@ -1,0 +1,374 @@
+/* RVCR Business Case Page Exact Screenshot Matching Styles */
+
+.rvcr-business-page-exact {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2d3748;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-section {
+  padding: 50px 0;
+}
+
+/* 1. Hero Section matching screenshot */
+.business-hero-exact {
+  background-image: url('/images/why-rvcr-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 70px 0 80px;
+  color: #ffffff;
+}
+
+.business-hero-exact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 60%, rgba(15, 23, 42, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-container-flex {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtext {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.hero-right-callout {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-products-tag {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.hero-invest-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #facc15;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.gold-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fef08a;
+  display: block;
+  margin-top: 6px;
+}
+
+/* Typography Headings */
+.section-main-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #003461;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.sub-section-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #003461;
+  margin-bottom: 18px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.section-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+/* 2. Overview Section */
+.overview-2col-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.zero-carbon-badge-img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 3. Business Cases Section */
+.intro-p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.cases-2col-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 40px;
+  margin: 24px 0 32px;
+}
+
+.hands-tech-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+.check-list-purple {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.check-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.purple-check-icon {
+  color: #80286e;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.cases-post-text {
+  margin-top: 24px;
+}
+
+/* Purple Pill Button */
+.btn-wrapper {
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.purple-pill-btn {
+  display: inline-block;
+  background-color: #80286e;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(128, 40, 110, 0.25);
+}
+
+.purple-pill-btn:hover {
+  background-color: #611b52;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(128, 40, 110, 0.35);
+}
+
+/* Project Item Rows & 2-Col Blocks */
+.item-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.item-title-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.project-item-block {
+  margin-bottom: 36px;
+}
+
+.project-2col-block {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.square-engine-3d-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* 6. Upcoming (Renewable energy) 2-Col */
+.re-2col-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.re-landscape-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* 8. Conclusion Section */
+.conclusion-banner-section {
+  position: relative;
+  background-image: url('/images/why-rvcr-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.conclusion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  z-index: 1;
+}
+
+.conclusion-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.conclusion-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.conclusion-text {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+/* 9. Summary Blue Box Section */
+.summary-blue-card-section {
+  padding: 50px 0 80px;
+}
+
+.summary-blue-box {
+  background: linear-gradient(180deg, #164675 0%, #0c3358 100%);
+  color: #ffffff;
+  padding: 36px 40px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(12, 51, 88, 0.2);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.summary-box-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.summary-box-text {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .hero-container-flex,
+  .overview-2col-layout,
+  .cases-2col-grid,
+  .project-2col-block,
+  .re-2col-layout {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-right-callout {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-invest-title {
+    font-size: 1.9rem;
+  }
+}

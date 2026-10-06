@@ -1,0 +1,897 @@
+/* ==========================================================================
+   GYATK.COM EXACT HOMEPAGE STYLESHEET
+   1:1 Pixel-Accurate Alignment to Screenshot media_1788615750855.png
+   ========================================================================== */
+
+/* Common Section Layouts */
+.section-common {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.section-title-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-badge-purple {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #96337B;
+  margin-bottom: 12px;
+}
+
+.section-heading-dark {
+  font-family: 'Roboto', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #111111;
+  margin-bottom: 16px;
+}
+
+/* Two-column Feature Row */
+.two-col-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Image with White Border and Soft Shadow (Original Gyatk Style) */
+.framed-photo-wrap {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 8px solid #FFFFFF;
+}
+
+.framed-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.framed-photo:hover {
+  transform: scale(1.02);
+}
+
+.desc-justify {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #54595F;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   SECTION 3: WHO WE ARE (#whowe)
+   ========================================================================== */
+#whowe {
+  background-image: url("/images/6402684_3274387-scaled-1.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0 110px 0;
+  overflow: hidden;
+}
+
+.whowe-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #FFFFFF;
+  opacity: 0.82;
+  z-index: 1;
+}
+
+#whowe .container {
+  position: relative;
+  z-index: 2;
+}
+
+.whowe-text-col {
+  padding: 0 30px 0 15px;
+}
+
+/* ==========================================================================
+   SECTION 4: OUR PURSUIT (#pursuit)
+   ========================================================================== */
+#pursuit {
+  background-color: #FFFFFF;
+  padding: 90px 0;
+}
+
+.pursuit-text-col {
+  padding: 0 20px 0 0;
+}
+
+/* ==========================================================================
+   SECTION 5: OUR IPR REACH / FLIP BOXES (#reach)
+   ========================================================================== */
+#reach {
+  background-color: #000000;
+  padding: 85px 0 95px 0;
+  color: #FFFFFF;
+}
+
+#reach .section-heading-white {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.flipbox-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 45px;
+}
+
+/* 3D Flip Card Container */
+.flip-card {
+  background-color: transparent;
+  height: 270px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background: linear-gradient(72deg, #212121 0%, #000000 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.flag-circle-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.flag-circle-icon svg,
+.flag-circle-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.flip-card-desc {
+  font-size: 14px;
+  color: #D1D5DB;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.flip-card-desc strong {
+  display: block;
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.flip-card-back {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  position: relative;
+  color: #FFFFFF;
+}
+
+.flip-card-back::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.flip-card-back-content {
+  position: relative;
+  z-index: 2;
+}
+
+.reach-btn-wrap {
+  text-align: center;
+}
+
+/* ==========================================================================
+   SECTION 6: WHAT WE OFFER (#whatweoffer)
+   ========================================================================== */
+#whatweoffer {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F7 100%);
+  padding: 90px 0;
+}
+
+.offer-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.offer-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 11px 22px 0px rgba(0, 0, 0, 0.08);
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 18px 32px 0px rgba(0, 0, 0, 0.14);
+}
+
+.offer-icon-wrap {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.offer-icon-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.offer-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.offer-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #54595F;
+  text-align: justify;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   SECTION 7: RVCR OPPORTUNITIES (#opportunities) - 3 ROWS
+   ========================================================================== */
+#opportunities {
+  background-color: #FFFFFF;
+  padding: 90px 0;
+}
+
+.opportunities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.opportunities-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.opp-text-col {
+  padding-right: 15px;
+}
+
+.opp-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #96337B;
+  margin-bottom: 8px;
+}
+
+.opp-main-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #111111;
+  margin-bottom: 16px;
+}
+
+.opp-desc-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #54595F;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   SECTION 8: PROJECTS (#projects)
+   ========================================================================== */
+.projects-section-wrap {
+  background-color: #FFFFFF;
+  padding: 70px 0 95px 0;
+}
+
+.projects-header {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.projects-main-heading {
+  font-family: 'Roboto', 'Michroma', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.projects-navy-card {
+  background-color: #003461;
+  display: grid;
+  grid-template-columns: 375px 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 35px 45px 45px 25px;
+  position: relative;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 52, 97, 0.1);
+}
+
+.projects-media-frame {
+  margin-top: -65px;
+  background-color: #FFFFFF;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 2;
+  line-height: 0;
+}
+
+.projects-proto-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projects-info-content {
+  color: #FFFFFF;
+  padding-right: 15px;
+}
+
+.projects-info-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+
+.projects-info-italic {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #E02B66 !important;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.projects-info-desc {
+  margin-bottom: 24px;
+}
+
+.projects-info-desc p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13.5px !important;
+  line-height: 1.65;
+  color: #FFFFFF !important;
+  margin: 0 0 16px 0;
+}
+
+.projects-info-desc p:last-child {
+  margin-bottom: 0;
+}
+
+.projects-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.projects-cta-text {
+  border-bottom: 1.5px solid #FFFFFF;
+  padding-bottom: 2px;
+}
+
+.projects-cta-arrow {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.projects-cta-link:hover {
+  opacity: 0.85;
+}
+
+.projects-cta-link:hover .projects-cta-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .projects-navy-card {
+    grid-template-columns: 1fr;
+    padding: 30px 25px 40px 25px;
+    gap: 30px;
+  }
+  .projects-media-frame {
+    margin-top: -60px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==========================================================================
+   SECTION 9: GALLERY PREVIEW (#gallery) - 3 COLUMNS × 4 ROWS = 12 PHOTOS
+   ========================================================================== */
+#gallery {
+  background-color: #FFFFFF;
+  padding: 90px 0;
+}
+
+.gallery-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.gallery-thumb-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  background-color: #F1F5F9;
+}
+
+.gallery-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-thumb-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 52, 97, 0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  color: #FFFFFF;
+}
+
+.gallery-thumb-item:hover .gallery-thumb-overlay {
+  opacity: 1;
+}
+
+.gallery-btn-center {
+  text-align: center;
+}
+
+.gallery-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.88);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-lightbox-inner {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-lightbox-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   SECTION 10: CREDITS & AWARDS (#awards) - INNER TABS + ELEVATED CENTER CARD
+   ========================================================================== */
+.awards-section-wrap {
+  background-color: #FFFFFF;
+  padding: 85px 0 115px 0;
+}
+
+.awards-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.awards-main-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.awards-cards-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.award-item-card {
+  flex: 1;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid #ECEFF1;
+  padding: 16px 16px 26px 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  min-height: 235px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elevated Center Highlight Card ("Funded") */
+.award-item-card.award-elevated-highlight {
+  flex: 1.12;
+  border-radius: 8px;
+  padding: 20px 20px 38px 20px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E0E0E0;
+  transform: translateY(-20px);
+  min-height: 300px;
+  z-index: 10;
+}
+
+.award-inner-tab {
+  border-radius: 4px;
+  padding: 9px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.award-elevated-highlight .award-inner-tab {
+  padding: 11px 0;
+  margin-bottom: 35px;
+}
+
+.award-inner-tab-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
+}
+
+.award-elevated-highlight .award-inner-tab-title {
+  font-size: 16px;
+}
+
+.award-carousel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 4px;
+}
+
+.award-chevron-btn {
+  background: none;
+  border: none;
+  color: #96337B; /* Exact purple chevron from screenshot */
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  line-height: 0;
+}
+
+.award-chevron-btn:hover {
+  transform: scale(1.25);
+  opacity: 0.85;
+}
+
+.award-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0 10px;
+  height: 85px;
+}
+
+.award-elevated-highlight .award-logo-box {
+  height: 110px;
+}
+
+.award-logo-img {
+  max-height: 72px;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+}
+
+.award-elevated-highlight .award-logo-img {
+  max-height: 92px;
+  max-width: 200px;
+}
+
+@media (max-width: 991px) {
+  .awards-cards-row {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 450px;
+  }
+  .award-item-card.award-elevated-highlight {
+    transform: none;
+    flex: auto;
+    width: 100%;
+  }
+  .award-item-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   SECTION 11: JOIN THE ENDEAVOR (#contactus) - no-carbon2.webp BACKGROUND
+   ========================================================================== */
+.join-endeavor-section {
+  background-image: url("/images/no-carbon2.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0 120px 0;
+  color: #FFFFFF;
+}
+
+.join-endeavor-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 15, 30, 0.45);
+  z-index: 1;
+}
+
+.join-endeavor-container {
+  position: relative;
+  z-index: 2;
+}
+
+.join-heading-white {
+  font-family: 'Roboto', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.join-sub-white {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #E2E8F0;
+  margin-bottom: 30px;
+}
+
+.contactus-glass-card {
+  background: rgba(10, 25, 45, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.form-field-group {
+  margin-bottom: 14px;
+}
+
+.form-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-input-glass,
+.form-textarea-glass {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-input-glass::placeholder,
+.form-textarea-glass::placeholder {
+  color: #CBD5E1;
+}
+
+.form-input-glass:focus,
+.form-textarea-glass:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00A9EA;
+  box-shadow: 0 0 0 3px rgba(0, 169, 234, 0.3);
+}
+
+.form-textarea-glass {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-submit-glass {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+}
+
+.form-status-msg-glass {
+  text-align: center;
+  padding: 20px;
+  color: #A7F3D0;
+}
+
+.form-status-msg-glass h4 {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .flipbox-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .offer-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .awards-tabs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .award-column-card.award-highlight {
+    transform: none;
+  }
+  .gallery-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .two-col-row,
+  .opportunities-row,
+  .projects-box-grid,
+  .contactus-row {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .gallery-grid-3col {
+    grid-template-columns: 1fr;
+  }
+  .flipbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-field-row {
+    grid-template-columns: 1fr;
+  }
+  .section-heading-dark,
+  #reach .section-heading-white,
+  .join-heading-white {
+    font-size: 30px;
+  }
+}

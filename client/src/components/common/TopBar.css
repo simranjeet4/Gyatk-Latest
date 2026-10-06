@@ -1,0 +1,116 @@
+/* ==========================================================================
+   GYATK TOPBAR (1:1 ORIGINAL MATCH)
+   ========================================================================== */
+
+.gyatk-topbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #E8E7EF;
+  padding: 6px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gyatk-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gyatk-topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.gyatk-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #003461;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: color 0.2s ease;
+}
+
+.gyatk-topbar-item:hover {
+  color: #CC2B5E;
+}
+
+.phone-item {
+  padding-right: 45px;
+  border-right: 1px solid #E8E7EF;
+}
+
+.email-item {
+  padding-left: 45px;
+}
+
+.gyatk-topbar-icon {
+  color: #CC2B5E;
+  flex-shrink: 0;
+}
+
+/* Right Social Icons - Solid Brand Colored Squares */
+.gyatk-topbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gyatk-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 3px;
+  color: #ffffff !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gyatk-social-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.social-facebook {
+  background-color: #3B5998;
+}
+
+.social-twitter {
+  background-color: #00ACEE;
+}
+
+.social-youtube {
+  background-color: #CD201F;
+}
+
+.social-instagram {
+  background-color: #A22695;
+}
+
+.social-linkedin {
+  background-color: #0077B5;
+}
+
+@media (max-width: 768px) {
+  .phone-item {
+    padding-right: 15px;
+  }
+  .email-item {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gyatk-topbar-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .phone-item {
+    border-right: none;
+    padding-right: 10px;
+  }
+  .email-item {
+    padding-left: 10px;
+  }
+}

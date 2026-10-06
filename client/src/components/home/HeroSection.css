@@ -1,0 +1,255 @@
+.gyatk-hero-section {
+  position: relative;
+  background-color: transparent;
+  background-image: radial-gradient(at center center, #00A9EA 0%, #00306A 100%);
+  padding: 40px 0 70px 0;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.gyatk-hero-particles {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.gyatk-hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.gyatk-hero-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gyatk-hero-title-main {
+  font-family: 'Michroma', sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.gyatk-hero-spacer {
+  height: 25px;
+}
+
+.gyatk-hero-title-sub {
+  font-family: 'Michroma', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1.7px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Right Column Orbit Stage */
+.gyatk-hero-col-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gyatk-hero-orbit-stage {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gyatk-hero-center-logo {
+  position: relative;
+  z-index: 5;
+  width: 210px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-logo-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Orbiting Spheres and Text */
+.gyatk-orbit-ball {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball-img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.orbit-text {
+  font-family: Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Exact Keyframes from gyatk.com */
+.mving1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: oving 12s linear infinite;
+}
+
+@keyframes oving {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+.drive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s ene ease-in-out -4s infinite;
+  opacity: 0;
+}
+
+@keyframes ene {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+.power {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: 12s -8s pow ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes pow {
+  0% {
+    z-index: 4;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+  25% {
+    z-index: 4;
+    transform: translate(0px, -50%) scale(.55);
+    animation-timing-function: cubic-bezier(.41, .3, .78, 1);
+    opacity: .3;
+  }
+  50% {
+    z-index: 4;
+    transform: translate(170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.34, 0, .52, .53);
+    opacity: .75;
+  }
+  75% {
+    z-index: 12;
+    transform: translate(0px, -50%) scale(1.2);
+    animation-timing-function: cubic-bezier(.36, .36, .73, .99);
+    opacity: 1;
+  }
+  100% {
+    z-index: 12;
+    transform: translate(-170px, -50%) scale(1);
+    animation-timing-function: cubic-bezier(.41, .01, .7, .71);
+    opacity: .75;
+  }
+}
+
+@media (max-width: 992px) {
+  .gyatk-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .gyatk-hero-col-left {
+    align-items: center;
+  }
+  .gyatk-hero-title-main {
+    font-size: 28px;
+  }
+  .gyatk-hero-title-sub {
+    font-size: 20px;
+  }
+}

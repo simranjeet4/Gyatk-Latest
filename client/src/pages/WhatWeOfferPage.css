@@ -1,0 +1,161 @@
+/* What We Offer Page Styling matching reference screenshot 100% */
+.what-we-offer-root {
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 64px 0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-light-grid {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Hero Section */
+.offer-hero {
+  width: 100%;
+  min-height: 360px;
+  background-image: url('/images/hero-tech-graphic.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.offer-hero-container {
+  display: block;
+}
+
+.offer-hero-text {
+  max-width: 540px;
+}
+
+.offer-hero-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #1b355a;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+}
+
+.offer-hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0284c7;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Eyebrow Badge & Headings */
+.eyebrow-badge {
+  display: inline-block;
+  color: #c026d3;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.card-main-heading {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0 0 18px 0;
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 16px 0;
+}
+
+.italic-bold {
+  font-style: italic;
+  font-weight: 700;
+  color: #334155;
+}
+
+.italic-sub {
+  font-style: italic;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* Know More Button Styling matching screenshot gradient */
+.btn-wrap {
+  margin-top: 24px;
+}
+
+.know-more-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e3a8a 0%, #a21caf 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(162, 28, 175, 0.3);
+  transition: all 0.25s ease;
+}
+
+.know-more-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #c026d3 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(162, 28, 175, 0.4);
+}
+
+/* Card Images */
+.offer-card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.solution-graphic-img {
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

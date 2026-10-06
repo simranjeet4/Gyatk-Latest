@@ -1,0 +1,259 @@
+/* Commercial Services Page Styling - hero-tech-graphic.jpg as Background */
+.commercial-page-root {
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 56px 0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-light-grid {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Hero Section with hero-tech-graphic.jpg as Background */
+.commercial-hero {
+  width: 100%;
+  min-height: 380px;
+  background-image: url('/images/hero-tech-graphic.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.commercial-hero-container {
+  display: block;
+}
+
+.commercial-hero-text {
+  max-width: 520px;
+}
+
+.commercial-hero-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1b355a;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+}
+
+.commercial-hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0284c7;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Section Headings */
+.section-heading {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 18px 0;
+  line-height: 1.25;
+}
+
+.assessment-sub-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+}
+
+.subheading-small {
+  font-size: 18px !important;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 24px 0 14px 0;
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 16px 0;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+/* Preliminary Assessment List Styling */
+.preliminary-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.list-check-icon {
+  color: #0284c7;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.list-text-main {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.list-item-with-sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.preliminary-sub-list {
+  list-style: none;
+  padding-left: 28px;
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preliminary-sub-list li {
+  font-size: 14px;
+  color: #0284c7;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.sub-bullet-dot {
+  color: #f97316;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Zero Carbon Badge */
+.zero-carbon-badge-img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Assessment Card Images */
+.assessment-card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+/* Detailed Assessment Box */
+.detailed-assessment-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+/* Process Flow Section - Full Width Edge to Edge */
+.process-flow-section-fullwidth {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1726;
+  display: block;
+}
+
+.process-flow-fullwidth-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Summary Callout Card */
+.summary-callout-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 48px;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.25);
+}
+
+.summary-card-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin: 0 0 16px 0;
+}
+
+.summary-card-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e0f2fe;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.sub-bullet-icon {
+  color: #f97316;
+  flex-shrink: 0;
+  margin-top: 3px;
+}

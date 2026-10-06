@@ -1,0 +1,565 @@
+.patents-page-root {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* Hero Section */
+.patents-hero {
+  position: relative;
+  background-color: #001630;
+  background-image: url('/images/strategy-banner.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0 60px 0;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.patents-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0, 30, 61, 0.35) 0%, rgba(0, 15, 35, 0.8) 100%);
+  z-index: 1;
+}
+
+.patents-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.patents-hero-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.patents-hero-text {
+  max-width: 540px;
+}
+
+.patents-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.patents-hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patents-hero-shaft-img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.65));
+}
+
+/* Floating Gold Seal Badge on Far Bottom-Right Corner (Outside Container) */
+.patents-gold-seal-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: #ffffff;
+  box-shadow: -6px -6px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 4px;
+  line-height: 0;
+}
+
+.patents-seal-badge-img {
+  height: 200px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Base Section Styling */
+.patents-section {
+  padding: 80px 0;
+}
+
+.patents-section-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #003461;
+  margin-bottom: 24px;
+}
+
+.patents-narrative-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.patents-applicable-intro {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+/* Check list */
+.patents-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.patents-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 1.025rem;
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+.check-icon-wrapper {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.check-icon {
+  stroke-width: 2.5;
+}
+
+/* Interactive Global World Map Section */
+.patents-interactive-map-section {
+  width: 100%;
+  max-width: 1040px;
+  margin: 48px auto 60px auto;
+}
+
+.patents-map-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.patents-map-base-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Map Pin Hotspots & Tooltips matching reference screenshot */
+.map-pin-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.pin-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #801854;
+  box-shadow: 0 0 0 3px rgba(128, 24, 84, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-pin-hotspot:hover {
+  z-index: 25;
+}
+
+.map-pin-hotspot:hover .pin-dot {
+  transform: scale(1.35);
+  background-color: #96337B;
+  box-shadow: 0 0 0 6px rgba(150, 51, 123, 0.35);
+}
+
+.map-tooltip-box {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  min-width: 170px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  pointer-events: none;
+  z-index: 30;
+  white-space: nowrap;
+}
+
+.map-pin-hotspot:hover .map-tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.tooltip-country-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  margin: 0 0 4px 0;
+}
+
+.tooltip-patent-no {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin: 0 0 10px 0;
+}
+
+.tooltip-open-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.tooltip-open-link:hover {
+  color: #003461;
+  text-decoration: underline;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Highlight Banner Box */
+.patents-highlight-banner {
+  background: linear-gradient(135deg, #003461 0%, #0f172a 100%);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  color: #ffffff;
+  margin: 56px 0;
+  box-shadow: 0 10px 25px rgba(0, 52, 97, 0.18);
+}
+
+.highlight-banner-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.highlight-banner-sub {
+  font-size: 1.1rem;
+  color: #38bdf8;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Numbered Section (Cards 1 & 2) */
+.patents-numbered-section {
+  margin-top: 48px;
+}
+
+.patents-intro-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 32px;
+}
+
+.patents-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.numbered-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-big-number {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #003461;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.card-body-text {
+  font-size: 1.025rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+/* Realization Section Specifics */
+.patents-realization-section {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.patents-realization-intro p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 36px;
+}
+
+/* Flowchart Container */
+.patents-flowchart-container {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 48px;
+}
+
+.flowchart-left-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flowchart-node {
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+.root-node {
+  background: #003461;
+  color: #ffffff;
+  font-size: 1.05rem;
+  padding: 16px 28px;
+}
+
+.flowchart-connector-line {
+  width: 2px;
+  height: 24px;
+  background-color: #cbd5e1;
+  margin: 4px 0;
+}
+
+.flowchart-branches {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.branch-red {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.branch-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.flowchart-right-features .patents-check-list {
+  margin: 0;
+}
+
+.patents-realization-conclude p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+/* Patent Downloads Block */
+.patents-downloads-block {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.downloads-block-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003461;
+  margin-bottom: 24px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 52, 97, 0.08);
+  border-color: #003461;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cert-icon {
+  color: #003461;
+}
+
+.cert-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cert-country {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cert-authority {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.cert-download-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0284c7;
+  margin-top: auto;
+}
+
+.cert-card:hover .cert-download-link {
+  color: #96337B;
+}
+
+/* Responsive queries */
+@media (max-width: 992px) {
+  .patents-hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .patents-hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .patents-gold-seal-badge {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 32px;
+    align-self: flex-end;
+  }
+
+  .patents-grid-2col,
+  .patents-flowchart-container,
+  .certs-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .flowchart-branches {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .patents-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .patents-section {
+    padding: 56px 0;
+  }
+
+  .patents-section-title {
+    font-size: 1.75rem;
+  }
+
+  .patents-seal-badge-img {
+    height: 130px;
+  }
+}

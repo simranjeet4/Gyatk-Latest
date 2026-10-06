@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1788609949734,
+    "email": "test@example.com",
+    "phone": "1234567890",
+    "message": "Test message for RVCR inquiry",
+    "receivedAt": "2026-09-05T12:05:49.734Z"
+  },
+  {
+    "id": 1788609020046,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+123456789",
+    "subject": "Technology Licensing",
+    "message": "Testing contact inquiry.",
+    "receivedAt": "2026-09-05T11:50:20.046Z"
+  }
+]
