@@ -7,8 +7,7 @@ import {
   Search, 
   Tag, 
   ArrowRight, 
-  ChevronRight,
-  BookOpen
+  ChevronRight
 } from 'lucide-react';
 import { INITIAL_POSTS } from '../data/initialPosts';
 import './Blog.css';
@@ -74,29 +73,18 @@ export default function BlogPage() {
 
   return (
     <div className="blog-page-root">
-      {/* 1. Hero Banner */}
-      <section className="blog-hero-banner">
-        <div className="blog-hero-overlay"></div>
-        <div className="blog-hero-container">
-          <span className="blog-hero-badge">
-            <BookOpen size={14} />
-            <span>Insights & Research</span>
-          </span>
-          <h1 className="blog-hero-title">GYATK Engineering Blog</h1>
-          <p className="blog-hero-subtitle">
-            Explore our latest research, technical articles, zero-carbon innovations, and engine technology developments.
-          </p>
-
-          {/* Search Bar in Hero */}
-          <div className="blog-search-box">
-            <Search size={18} className="search-icon" />
-            <input 
-              type="text" 
-              placeholder="Search articles by keyword or topic..." 
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="search-input"
-            />
+      {/* 1. Hero Banner structured identically to About Us hero banner */}
+      <section className="blog-hero-banner ze-style-hero">
+        <div className="blog-hero-particles" />
+        <div className="container blog-hero-container">
+          <div className="blog-hero-left">
+            <h1 className="blog-hero-title-main">
+              RVCR: The New Paradigm in Energy Conversion.
+            </h1>
+            <div className="blog-hero-spacer" />
+            <h2 className="blog-hero-title-sub">
+              Driving an evolutionary shift in zero-carbon technologies.
+            </h2>
           </div>
         </div>
       </section>
@@ -225,6 +213,23 @@ export default function BlogPage() {
 
           {/* Right Sidebar Column */}
           <aside className="blog-sidebar-column">
+
+            {/* Widget 0: Search Widget */}
+            <div className="sidebar-widget search-widget">
+              <h3 className="widget-heading">
+                <span>Search Articles</span>
+              </h3>
+              <div className="sidebar-search-box">
+                <Search size={18} className="sidebar-search-icon" />
+                <input 
+                  type="text" 
+                  placeholder="Search keywords..." 
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                  className="sidebar-search-input"
+                />
+              </div>
+            </div>
 
             {/* Widget 1: Recent Posts List */}
             <div className="sidebar-widget recent-posts-widget">
