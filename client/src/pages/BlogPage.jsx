@@ -73,7 +73,7 @@ export default function BlogPage() {
 
   return (
     <div className="blog-page-root">
-      {/* 1. Hero Banner structured identically to About Us hero banner */}
+      {/* 1. Hero Banner structured identically to About Us hero banner with 3D Orbit Animation */}
       <section className="blog-hero-banner ze-style-hero">
         <div className="blog-hero-particles" />
         <div className="container blog-hero-container">
@@ -85,6 +85,46 @@ export default function BlogPage() {
             <h2 className="blog-hero-title-sub">
               Driving an evolutionary shift in zero-carbon technologies.
             </h2>
+          </div>
+
+          <div className="blog-hero-right">
+            <div className="blog-hero-orbit-stage">
+              {/* Bubble Background & Center Logo */}
+              <div className="blog-bubble-orb">
+                <img 
+                  src="/images/gyatk-logo-svg.png" 
+                  alt="GYATK Innovation" 
+                  className="blog-bubble-logo"
+                />
+              </div>
+
+              {/* Orbit 1: Power-gyatk */}
+              <div className="blog-orbit-ball mving1">
+                <img 
+                  src="/images/Power-gyatk.png" 
+                  alt="GYATK Innovation" 
+                  className="blog-ball-img"
+                />
+              </div>
+
+              {/* Orbit 2: New-Project-6 */}
+              <div className="blog-orbit-ball drive">
+                <img 
+                  src="/images/New-Project-6.png" 
+                  alt="GYATK Clean Technology" 
+                  className="blog-ball-img"
+                />
+              </div>
+
+              {/* Orbit 3: New-Project-5 */}
+              <div className="blog-orbit-ball power">
+                <img 
+                  src="/images/New-Project-5.png" 
+                  alt="GYATK Deep Tech" 
+                  className="blog-ball-img"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
