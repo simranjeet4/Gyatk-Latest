@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
 import TopBar from './TopBar';
 import './Header.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [stayDropdownOpen, setStayDropdownOpen] = useState(false);
+  const [ecosystemDropdownOpen, setEcosystemDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -20,7 +21,8 @@ export default function Header() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setDropdownOpen(false);
+    setStayDropdownOpen(false);
+    setEcosystemDropdownOpen(false);
   }, [location]);
 
   const stayOnPageLinks = [
@@ -32,6 +34,12 @@ export default function Header() {
     { label: "Projects", href: "/#projects" },
     { label: "Gallery", href: "/#gallery" },
     { label: "Join us", href: "/#contactus" }
+  ];
+
+  const ecosystemLinks = [
+    { label: "KGYAT", href: "https://kgyat.com", isExternal: true },
+    { label: "RVCR.tech", href: "https://rvcr.tech", isExternal: true },
+    { label: "Patents", href: "/patents", isExternal: false }
   ];
 
   return (
@@ -64,29 +72,72 @@ export default function Header() {
                 </Link>
               </li>
 
-              {/* Stay on Page Dropdown (Plain text like original gyatk.com, no caret) */}
+              {/* Stay on Page Dropdown */}
               <li 
                 className="gyatk-menu-item has-dropdown"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setStayDropdownOpen(true)}
+                onMouseLeave={() => setStayDropdownOpen(false)}
               >
                 <button 
                   className="gyatk-menu-link dropdown-btn" 
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  onClick={() => setStayDropdownOpen(!stayDropdownOpen)}
                 >
                   Stay on Page
                 </button>
 
-                <ul className={`gyatk-submenu ${dropdownOpen ? 'show' : ''}`}>
+                <ul className={`gyatk-submenu ${stayDropdownOpen ? 'show' : ''}`}>
                   {stayOnPageLinks.map((item) => (
                     <li key={item.label} className="gyatk-submenu-item">
                       <a 
                         href={item.href} 
                         className="gyatk-submenu-link" 
-                        onClick={() => setDropdownOpen(false)}
+                        onClick={() => setStayDropdownOpen(false)}
                       >
                         {item.label}
                       </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+              {/* Ecosystem Dropdown Tab */}
+              <li 
+                className={`gyatk-menu-item has-dropdown ${location.pathname === '/patents' ? 'active-item' : ''}`}
+                onMouseEnter={() => setEcosystemDropdownOpen(true)}
+                onMouseLeave={() => setEcosystemDropdownOpen(false)}
+              >
+                <button 
+                  className={`gyatk-menu-link dropdown-btn with-caret ${ecosystemDropdownOpen ? 'open' : ''}`}
+                  onClick={() => setEcosystemDropdownOpen(!ecosystemDropdownOpen)}
+                >
+                  <span>Ecosystem</span>
+                  <ChevronDown size={14} className="dropdown-caret-icon" />
+                </button>
+
+                <ul className={`gyatk-submenu ecosystem-submenu ${ecosystemDropdownOpen ? 'show' : ''}`}>
+                  {ecosystemLinks.map((item) => (
+                    <li key={item.label} className="gyatk-submenu-item">
+                      {item.isExternal ? (
+                        <a 
+                          href={item.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="gyatk-submenu-link ecosystem-sublink"
+                          onClick={() => setEcosystemDropdownOpen(false)}
+                        >
+                          <span>{item.label}</span>
+                          <ExternalLink size={13} className="ext-icon" />
+                        </a>
+                      ) : (
+                        <Link 
+                          to={item.href} 
+                          className="gyatk-submenu-link ecosystem-sublink"
+                          onClick={() => setEcosystemDropdownOpen(false)}
+                        >
+                          <span>{item.label}</span>
+                          <ExternalLink size={13} className="ext-icon" />
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -135,6 +186,36 @@ export default function Header() {
                     <a href={item.href} className="gyatk-mobile-sublink" onClick={() => setMobileMenuOpen(false)}>
                       {item.label}
                     </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li className="gyatk-mobile-group">
+              <span className="gyatk-mobile-group-title">Ecosystem</span>
+              <ul className="gyatk-mobile-sublist">
+                {ecosystemLinks.map((item) => (
+                  <li key={item.label}>
+                    {item.isExternal ? (
+                      <a 
+                        href={item.href} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="gyatk-mobile-sublink ext-mobile-sublink" 
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span>{item.label}</span>
+                        <ExternalLink size={12} />
+                      </a>
+                    ) : (
+                      <Link 
+                        to={item.href} 
+                        className="gyatk-mobile-sublink ext-mobile-sublink" 
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span>{item.label}</span>
+                        <ExternalLink size={12} />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
