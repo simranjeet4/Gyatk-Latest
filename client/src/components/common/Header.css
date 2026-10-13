@@ -248,7 +248,8 @@
 }
 
 .ecosystem-submenu {
-  width: 200px;
+  min-width: 230px;
+  width: auto;
   padding: 16px 14px 18px 14px;
   gap: 6px;
 }
