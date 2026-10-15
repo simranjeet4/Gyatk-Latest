@@ -1,6 +1,23 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    ZERO EMISSION / ABOUT US HOMEPAGE SECTIONS CSS (100% MATCH TO gyatk.com/zero-emission-technology/)
    ========================================================================== */
+
+/* All Headings Font Weight 700 */
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page h5,
+.about-page h6,
+.ze-page-wrapper h1,
+.ze-page-wrapper h2,
+.ze-page-wrapper h3,
+.ze-page-wrapper h4,
+.ze-page-wrapper h5,
+.ze-page-wrapper h6 {
+  font-weight: 700;
+}
+
 
 /* 1. Hero Banner */
 .ze-hero-banner {
@@ -41,7 +58,7 @@
 .ze-hero-title-main {
   font-family: var(--font-gyat);
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 0.5px;
   color: #FFFFFF;
   line-height: 1.25;
@@ -55,7 +72,7 @@
 .ze-hero-title-sub {
   font-family: var(--font-gyat);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.5px;
   color: #FFFFFF;
   line-height: 1.35;
@@ -253,7 +270,7 @@
 .ze-title-navy {
   font-family: var(--font-gyat);
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 700;
   color: #003461;
   line-height: 1.25;
   margin-bottom: 24px;
@@ -299,7 +316,7 @@
 .ze-team-title {
   font-family: var(--font-gyat);
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 700;
   color: #003461;
   line-height: 1.2;
   margin: 0 0 12px 0;
@@ -316,7 +333,7 @@
 .ze-focus-title {
   font-family: var(--font-gyat);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   color: #1e293b;
   margin-bottom: 12px;
@@ -402,7 +419,7 @@
 .ze-cb-title {
   font-family: var(--font-gyat);
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 700;
   color: #FFFFFF;
   line-height: 1.2;
   margin: 0 0 16px 0;
@@ -516,7 +533,7 @@
 .ze-raison-sub {
   font-family: var(--font-gyat);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   color: #003461;
   margin: 24px 0 16px 0;
 }
@@ -562,7 +579,7 @@
 .ze-sky-heading {
   font-family: var(--font-gyat);
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
   color: #003461;
   line-height: 1.25;
   margin: 0;
@@ -620,7 +637,7 @@
 .ze-card-title {
   font-family: var(--font-gyat);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   color: #003461;
   margin-bottom: 12px;
 }
