@@ -1,157 +1,289 @@
 /* ==========================================================================
-   GYATK MAIN HEADER (1:1 ORIGINAL MATCH TO media_1788610321098.png)
+   GYATK HEADER (KGYAT EXACT STRUCTURE & STYLING)
    ========================================================================== */
 
-.gyatk-header-wrapper {
-  position: sticky;
-  top: 0;
-  left: 0;
+.gyatk-kgyat-header {
+  position: relative;
   width: 100%;
   z-index: 999;
   background-color: #ffffff;
 }
 
-.gyatk-nav-container {
+/* --------------------------------------------------------------------------
+   Row 1: Header Top (Logo on Left, Social Icons on Right)
+   -------------------------------------------------------------------------- */
+.gyatk-header-top-row {
   background-color: #ffffff;
-  padding: 15px 0;
-  border-bottom: 1px solid #E8E7EF;
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.gyatk-nav-sticky {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 10px 0;
-}
-
-.gyatk-nav-inner {
+.gyatk-header-top-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo */
-.gyatk-logo-wrap {
+.gyatk-brand-logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.gyatk-header-logo {
-  max-width: 168px;
+.gyatk-brand-logo-img {
+  max-width: 205px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Desktop Navigation */
+.gyatk-header-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gyatk-social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #003461;
+  background-color: transparent;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.gyatk-social-icon-btn:hover {
+  color: #CF3367;
+  background-color: rgba(207, 51, 103, 0.08);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Row 2: Navbar (Home Icon + Tagline Left, Nav Links + Contact Right)
+   -------------------------------------------------------------------------- */
+.gyatk-navbar-row {
+  background-color: #ffffff;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #E8E7EF;
+  transition: all 0.25s ease;
+}
+
+.gyatk-navbar-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top-color: transparent;
+}
+
+.gyatk-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 54px;
+}
+
+/* Left: Home Icon + Subtitle */
+.gyatk-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gyatk-nav-home-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #003461;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.gyatk-nav-home-icon:hover {
+  color: #CF3367;
+  transform: scale(1.1);
+}
+
+.gyatk-navbar-tagline {
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #CF3367 !important;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+/* Right: Desktop Navigation */
 .gyatk-desktop-nav {
   display: flex;
   align-items: center;
 }
 
-.gyatk-menu-list {
+.gyatk-nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  list-style: none;
   margin: 0;
   padding: 0;
+  gap: 4px;
+}
+
+.gyatk-nav-item {
+  position: relative;
   list-style: none;
 }
 
-.gyatk-menu-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gyatk-menu-link {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: #003461;
-  padding: 8px 0;
+.gyatk-nav-link {
   display: inline-flex;
   align-items: center;
+  padding: 10px 14px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #272727;
+  text-decoration: none;
+  transition: color 0.2s ease;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.2s ease;
-  text-decoration: none;
+  white-space: nowrap;
 }
 
-.gyatk-menu-link:hover {
-  color: #96337B;
+.gyatk-nav-link:hover,
+.gyatk-nav-link.active,
+.gyatk-nav-item.active-item > .gyatk-nav-link {
+  color: #CF3367;
 }
 
-/* Active Page Indicator Dot (Matching media_1788610321098.png) */
-.gyatk-menu-item.active-item::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #96337B;
+/* Dropdown Toggle Caret */
+.dropdown-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* Dropdown Submenu */
-.gyatk-submenu {
+.dropdown-caret-icon {
+  transition: transform 0.2s ease;
+  color: inherit;
+}
+
+.dropdown-toggle-btn.open .dropdown-caret-icon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menus (Exact KGYAT Menu Style) */
+.gyatk-dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 235px;
+  width: 220px;
   background-color: #ffffff;
-  padding: 23px 0 30px 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(12px);
-  transition: all 0.25s ease;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease-in-out;
+  z-index: 1001;
+  border: 1px solid #f1f5f9;
 }
 
-.gyatk-submenu.show {
+.gyatk-dropdown-menu.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-.gyatk-submenu-item {
+.gyatk-dropdown-item {
   list-style: none;
+  margin: 0;
 }
 
-.gyatk-submenu-link {
-  display: block;
+.gyatk-dropdown-link {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px !important;
+  color: #272727 !important;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #003461;
-  padding: 4px 0;
-  transition: all 0.2s ease;
+  font-size: 14px !important;
+  font-weight: 500 !important;
   text-decoration: none;
+  transition: all 0.2s ease;
+  background-color: transparent;
 }
 
-.gyatk-submenu-link:hover {
-  color: #96337B;
-  padding-left: 6px;
+.gyatk-dropdown-link:hover {
+  background-color: #f7f7f9 !important;
+  color: #CF3367 !important;
+  padding-left: 20px !important;
 }
 
-/* Mobile Toggle & Drawer */
+.gyatk-dropdown-link .ext-icon {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.gyatk-dropdown-link:hover .ext-icon {
+  color: #CF3367;
+}
+
+.ecosystem-menu {
+  width: 230px;
+}
+
+/* Contact Button (KGYAT Signature Button) */
+.contact-item {
+  margin-left: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.kgyat-header-contact-btn {
+  background-color: #CF3367 !important;
+  color: #ffffff !important;
+  padding: 8px 20px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin-left: 10px !important;
+  transition: all 0.25s ease-in-out !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.kgyat-header-contact-btn:hover {
+  background-color: #A82450 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(207, 51, 103, 0.35) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Navigation & Drawer
+   -------------------------------------------------------------------------- */
 .gyatk-mobile-toggle {
   display: none;
   color: #003461;
-  padding: 4px;
+  padding: 6px;
   background: none;
   border: none;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .gyatk-mobile-drawer {
@@ -162,124 +294,149 @@
   .gyatk-desktop-nav {
     display: none;
   }
+
   .gyatk-mobile-toggle {
-    display: block;
+    display: inline-flex;
   }
 
+  .gyatk-navbar-tagline {
+    font-size: 15px;
+  }
+
+  /* Mobile Slide-Out Drawer */
   .gyatk-mobile-drawer {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 300px;
     height: 100vh;
-    background: #ffffff;
+    background-color: #ffffff;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 10000;
+    transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     overflow-y: auto;
-    padding: 2rem 1.5rem;
   }
 
   .gyatk-mobile-drawer.open {
     right: 0;
   }
 
-  .gyatk-mobile-list {
+  .gyatk-mobile-drawer-header {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .gyatk-mobile-logo {
+    max-width: 140px;
+    height: auto;
+  }
+
+  .gyatk-mobile-close {
+    background: none;
+    border: none;
+    color: #003461;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gyatk-mobile-drawer-body {
+    padding: 24px;
+  }
+
+  .gyatk-mobile-menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .gyatk-mobile-link {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     color: #003461;
     text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .gyatk-mobile-link:hover {
+    color: #CF3367;
+  }
+
+  .gyatk-mobile-group {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
   }
 
   .gyatk-mobile-group-title {
-    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     font-weight: 700;
-    color: #96337B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 
   .gyatk-mobile-sublist {
-    padding-left: 1rem;
+    list-style: none;
+    padding-left: 12px;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
+    gap: 10px;
   }
 
   .gyatk-mobile-sublink {
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    color: #555555;
+    color: #334155;
     text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  .gyatk-mobile-sublink:hover {
+    color: #CF3367;
+  }
+
+  .ext-mobile-sublink {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .gyatk-mobile-contact-wrap {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .mobile-contact-btn {
+    width: 100%;
+    text-align: center;
+    margin-left: 0 !important;
+    padding: 10px 20px !important;
   }
 }
 
-
-/* Ecosystem Submenu & Dropdown Enhancements */
-.dropdown-btn.with-caret {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.dropdown-caret-icon {
-  transition: transform 0.2s ease;
-  color: #003461;
-}
-
-.dropdown-btn.with-caret:hover .dropdown-caret-icon,
-.dropdown-btn.with-caret.open .dropdown-caret-icon {
-  color: #96337B;
-}
-
-.dropdown-btn.with-caret.open .dropdown-caret-icon {
-  transform: rotate(180deg);
-}
-
-.ecosystem-submenu {
-  min-width: 230px;
-  width: auto;
-  padding: 16px 14px 18px 14px;
-  gap: 6px;
-}
-
-.ecosystem-sublink {
-  display: flex !important;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px !important;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
-}
-
-.ecosystem-sublink:hover {
-  background-color: #f8fafc;
-  color: #96337B;
-  padding-left: 14px !important;
-}
-
-.ecosystem-sublink .ext-icon {
-  color: #94a3b8;
-  transition: color 0.2s ease;
-}
-
-.ecosystem-sublink:hover .ext-icon {
-  color: #96337B;
-}
-
-.ext-mobile-sublink {
-  display: flex !important;
-  align-items: center;
-  justify-content: space-between;
+@media (max-width: 600px) {
+  .gyatk-brand-logo-img {
+    max-width: 160px;
+  }
+  .gyatk-navbar-tagline {
+    font-size: 14px;
+  }
 }
