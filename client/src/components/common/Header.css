@@ -112,11 +112,12 @@
 
 .gyatk-navbar-tagline {
   font-family: 'Lato', 'Roboto', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   color: #CF3367 !important;
   letter-spacing: 0.2px;
   line-height: 1;
+  white-space: nowrap;
 }
 
 /* Right: Desktop Navigation */

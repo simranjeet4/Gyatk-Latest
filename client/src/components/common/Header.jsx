@@ -109,7 +109,7 @@ export default function Header() {
             <Link to="/" className="gyatk-nav-home-icon" aria-label="Home">
               <Home size={18} />
             </Link>
-            <span className="gyatk-navbar-tagline">Beyond Innovation</span>
+            <span className="gyatk-navbar-tagline">IP Owner & Commercialisation Lead for RVCR.</span>
           </div>
 
           {/* Right: Desktop Menu */}
