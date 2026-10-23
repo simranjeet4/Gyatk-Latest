@@ -33,8 +33,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 2.75rem; font-weight: var(--fw-light); }
-h2 { font-size: 2.125rem; font-weight: var(--fw-regular); }
-h3 { font-size: 1.5rem; font-weight: var(--fw-medium); }
+h2 { font-size: 2.125rem; font-weight: var(--fw-light); }
+h3 { font-size: 1.5rem; font-weight: var(--fw-light); }
 
 p {
   font-family: var(--font-gyat);
@@ -168,4 +168,39 @@ ul, ol {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* Standardize All Heading Font-Weights (300) to match Zero Emission Technology (About Us) */
+h1, h2,
+.hero-title,
+.hero-main-title,
+.page-hero-title,
+.section-title,
+.section-heading,
+.section-main-heading,
+.section-heading-dark,
+.section-heading-white,
+.banner-title,
+.card-main-heading,
+.commercial-hero-title,
+.technical-hero-title,
+.tech-innovation-hero-title,
+.why-rvcr-hero-title,
+.why-rvcr-section-title,
+.offer-hero-title,
+.patents-hero-title,
+.highlight-banner-title,
+.proposition-hero-title,
+.strategic-hero-title,
+.gallery-hero-title,
+.detail-hero-title,
+.gyatk-hero-title-main,
+.projects-main-heading,
+.projects-info-heading,
+.awards-main-heading,
+.join-heading-white,
+.opp-main-title {
+  font-family: var(--font-gyat);
+  font-weight: 300 !important;
 }

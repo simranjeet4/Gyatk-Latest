@@ -11,7 +11,7 @@
 
 .section-title {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 300;
   color: #003461;
   margin-bottom: 20px;
 }
@@ -55,7 +55,7 @@
 
 .hero-main-title {
   font-size: 2.75rem;
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
   line-height: 1.18;
   margin-bottom: 18px;
@@ -198,7 +198,7 @@
 
 .banner-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
   margin-bottom: 12px;
 }
@@ -407,7 +407,7 @@
 
 .summary-title-h3 {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 300;
   color: #003461;
   margin-top: 28px;
   margin-bottom: 12px;

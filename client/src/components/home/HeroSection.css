@@ -34,9 +34,9 @@
 }
 
 .gyatk-hero-title-main {
-  font-family: 'Michroma', sans-serif;
+  font-family: var(--font-gyat);
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.5px;
   color: #FFFFFF;
   line-height: 1.2;
@@ -48,9 +48,9 @@
 }
 
 .gyatk-hero-title-sub {
-  font-family: 'Michroma', sans-serif;
+  font-family: var(--font-gyat);
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 1.7px;
   color: #FFFFFF;
   line-height: 1.2;

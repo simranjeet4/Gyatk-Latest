@@ -11,9 +11,9 @@
 }
 
 .page-hero-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-gyat);
   font-size: 38px;
-  font-weight: 600;
+  font-weight: 300;
   color: #FFFFFF;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -65,9 +65,9 @@
 }
 
 .about-page .section-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-gyat);
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 300;
   color: #111111;
   margin-bottom: 16px;
 }
