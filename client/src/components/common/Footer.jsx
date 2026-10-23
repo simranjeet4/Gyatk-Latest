@@ -61,7 +61,7 @@ export default function Footer() {
               <li><Link to="/patents">Patents</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact-us">Contact Us</Link></li>
-              <li><Link to="/admin/blog" className="admin-shortcut-link">CMS Admin Panel</Link></li>
+              <li><Link to="/admin" className="admin-shortcut-link">Admin Portal (SEO & CMS)</Link></li>
             </ul>
           </div>
 

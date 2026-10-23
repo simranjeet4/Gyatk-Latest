@@ -6,6 +6,8 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const DATA_FILE = path.join(__dirname, 'data', 'posts.json');
+const SEO_FILE = path.join(__dirname, 'data', 'seo.json');
+const INQUIRIES_FILE = path.join(__dirname, 'data', 'inquiries.json');
 const IMAGES_DIR = path.join(__dirname, '..', 'images');
 const CLIENT_DIST = path.join(__dirname, '..', 'client', 'dist');
 
@@ -40,10 +42,39 @@ function writePosts(posts) {
   }
 }
 
+// Helper to read SEO data
+function readSeo() {
+  try {
+    if (!fs.existsSync(SEO_FILE)) {
+      return {};
+    }
+    const data = fs.readFileSync(SEO_FILE, 'utf8');
+    return JSON.parse(data);
+  } catch (err) {
+    console.error('Error reading SEO data:', err);
+    return {};
+  }
+}
+
+// Helper to write SEO data
+function writeSeo(seoData) {
+  try {
+    fs.writeFileSync(SEO_FILE, JSON.stringify(seoData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.error('Error writing SEO data:', err);
+    return false;
+  }
+}
+
 // API Health Check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', time: new Date().toISOString() });
 });
+
+// ==========================================
+// BLOG CMS ENDPOINTS
+// ==========================================
 
 // GET all blog posts
 app.get('/api/posts', (req, res) => {
@@ -148,17 +179,95 @@ app.delete('/api/posts/:id', (req, res) => {
   res.json({ message: 'Post successfully deleted', id });
 });
 
-// POST Contact Form submission (Acknowledged & saved locally)
+// ==========================================
+// SEO MANAGEMENT ENDPOINTS
+// ==========================================
+
+// GET all pages SEO settings
+app.get('/api/seo', (req, res) => {
+  const seoData = readSeo();
+  res.json(seoData);
+});
+
+// GET single page SEO settings
+app.get('/api/seo/:pageKey', (req, res) => {
+  const { pageKey } = req.params;
+  const seoData = readSeo();
+  const pageSeo = seoData[pageKey];
+  if (!pageSeo) {
+    return res.status(404).json({ error: 'SEO settings not found for this page' });
+  }
+  res.json(pageSeo);
+});
+
+// PUT update single page SEO settings
+app.put('/api/seo/:pageKey', (req, res) => {
+  const { pageKey } = req.params;
+  const seoData = readSeo();
+  
+  seoData[pageKey] = {
+    ...(seoData[pageKey] || {}),
+    ...req.body,
+    pageKey,
+    updatedAt: new Date().toISOString()
+  };
+
+  if (!writeSeo(seoData)) {
+    return res.status(500).json({ error: 'Failed to persist SEO settings' });
+  }
+
+  res.json(seoData[pageKey]);
+});
+
+// POST bulk save or add page SEO
+app.post('/api/seo', (req, res) => {
+  const { pageKey } = req.body;
+  if (!pageKey) {
+    return res.status(400).json({ error: 'pageKey is required' });
+  }
+
+  const seoData = readSeo();
+  seoData[pageKey] = {
+    ...(seoData[pageKey] || {}),
+    ...req.body,
+    updatedAt: new Date().toISOString()
+  };
+
+  if (!writeSeo(seoData)) {
+    return res.status(500).json({ error: 'Failed to persist SEO settings' });
+  }
+
+  res.status(201).json(seoData[pageKey]);
+});
+
+// ==========================================
+// CONTACT INQUIRIES ENDPOINTS
+// ==========================================
+
+// GET all contact inquiries (Admin)
+app.get('/api/inquiries', (req, res) => {
+  try {
+    if (!fs.existsSync(INQUIRIES_FILE)) {
+      return res.json([]);
+    }
+    const data = fs.readFileSync(INQUIRIES_FILE, 'utf8');
+    res.json(JSON.parse(data));
+  } catch (err) {
+    console.error('Failed to read inquiries:', err);
+    res.status(500).json({ error: 'Failed to read inquiries' });
+  }
+});
+
+// POST Contact Form submission
 app.post('/api/contact', (req, res) => {
   const { name, email, phone, subject, message } = req.body;
   console.log('Contact inquiry received:', { name, email, phone, subject, message });
   
   // Save to inquiries.json for reference
   try {
-    const inquiriesFile = path.join(__dirname, 'data', 'inquiries.json');
     let inquiries = [];
-    if (fs.existsSync(inquiriesFile)) {
-      inquiries = JSON.parse(fs.readFileSync(inquiriesFile, 'utf8'));
+    if (fs.existsSync(INQUIRIES_FILE)) {
+      inquiries = JSON.parse(fs.readFileSync(INQUIRIES_FILE, 'utf8'));
     }
     inquiries.unshift({
       id: Date.now(),
@@ -169,7 +278,7 @@ app.post('/api/contact', (req, res) => {
       message,
       receivedAt: new Date().toISOString()
     });
-    fs.writeFileSync(inquiriesFile, JSON.stringify(inquiries, null, 2), 'utf8');
+    fs.writeFileSync(INQUIRIES_FILE, JSON.stringify(inquiries, null, 2), 'utf8');
   } catch (err) {
     console.error('Failed to log inquiry:', err);
   }

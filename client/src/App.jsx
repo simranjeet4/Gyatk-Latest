@@ -1,8 +1,9 @@
-﻿import React from 'react';
-import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
+import { usePageSEO } from './hooks/usePageSEO';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -22,6 +23,7 @@ import GalleryLocationPage from './pages/GalleryLocationPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import AdminBlogPage from './pages/AdminBlogPage';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import ContactPage from './pages/ContactPage';
 import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -33,12 +35,38 @@ function DirectLocationWrapper({ defaultId }) {
   return <GalleryLocationPage locationId={locationId} />;
 }
 
+function GlobalSEO() {
+  const location = useLocation();
+  const path = location.pathname.toLowerCase();
+
+  let pageKey = 'home';
+  if (path === '/' || path === '') pageKey = 'home';
+  else if (path.includes('zero-emission') || path.includes('about')) pageKey = 'about';
+  else if (path.includes('business-case')) pageKey = 'rvcr-business-case';
+  else if (path.includes('why-rvcr')) pageKey = 'why-rvcr';
+  else if (path.includes('strategic-advantage')) pageKey = 'strategic-advantage';
+  else if (path.includes('what-we-offer')) pageKey = 'what-we-offer';
+  else if (path.includes('patents')) pageKey = 'patents';
+  else if (path === '/blog') pageKey = 'blog';
+  else if (path.includes('contact')) pageKey = 'contact-us';
+  else if (path.includes('market')) pageKey = 'rvcr-market';
+  else if (path.startsWith('/admin')) pageKey = null;
+  else pageKey = 'home';
+
+  usePageSEO(pageKey);
+  return null;
+}
+
 export default function App() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
+
   return (
-    <div className="app-root">
+    <div className={`app-root ${isAdmin ? 'admin-mode' : ''}`}>
       <ScrollToTop />
-      <Header />
-      <main className="app-main-content">
+      {!isAdmin && <GlobalSEO />}
+      {!isAdmin && <Header />}
+      <main className={`app-main-content ${isAdmin ? 'admin-main' : ''}`}>
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<HomePage />} />
@@ -69,16 +97,22 @@ export default function App() {
           <Route path="/tehran" element={<DirectLocationWrapper defaultId="tehran" />} />
           <Route path="/trivandrum" element={<DirectLocationWrapper defaultId="trivandrum" />} />
 
-          {/* Blog & CMS Admin */}
+          {/* Blog & Unified Admin */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/admin/blog" element={<AdminBlogPage />} />
+
+          {/* Admin Portal */}
+          <Route path="/admin" element={<AdminDashboard defaultTab="seo" />} />
+          <Route path="/admin/seo" element={<AdminDashboard defaultTab="seo" />} />
+          <Route path="/admin/blog" element={<AdminDashboard defaultTab="blog" />} />
+          <Route path="/admin/inquiries" element={<AdminDashboard defaultTab="inquiries" />} />
+          <Route path="/admin-blog-legacy" element={<AdminBlogPage />} />
 
           {/* 404 Wildcard */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      <Footer />
+      {!isAdmin && <Footer />}
     </div>
   );
 }
