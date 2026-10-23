@@ -34,11 +34,11 @@ export default function ZeroEmissionLayout() {
         <div className="container ze-hero-container">
           <div className="ze-hero-left">
             <h1 className="ze-hero-title-main">
-              RVCR - the new paradigm
+              About Us.
             </h1>
             <div className="ze-hero-spacer" />
             <h2 className="ze-hero-title-sub">
-              Driving an evolutionary shift in 'Zero - Carbon' technologies.
+              GYATK stewards the commercialization of RVCR technology through IP licensing, enabling partners to bring zero-carbon solutions to market. Its commercializing arm, KGYAT, drives engineering implementation.
             </h2>
           </div>
           <div className="ze-hero-right">
@@ -91,10 +91,7 @@ export default function ZeroEmissionLayout() {
           </div>
           <div className="ze-markets-text">
             <p>
-              At GYATK we have conceptualized and developed the ‘RVCR technology’ based on the invention of the RVCR Concept in ‘kinematics’ (a new breakthrough in Mechanism of Energy Conversion). We develop products based on RVCR for applications in Transport and Energy industry.
-            </p>
-            <p>
-              Explore the possibilities of creating newer markets with our next gen products for leading in the ‘0 Carbon’ future.
+              At GYAT, we have conceptualized RVCR technology based on the RVCR concept in kinematics - a breakthrough in energy-conversion mechanisms. We enable industry and OEM partners to develop new products using RVCR applications, allowing them to enter emerging transport and energy markets.
             </p>
           </div>
         </div>
