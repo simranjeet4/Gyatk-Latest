@@ -37,7 +37,7 @@ export default function Header() {
   ];
 
   const ecosystemLinks = [
-    { label: "Engine Subdirectory", href: "https://kgyat.com/engine-subdirectory", isExternal: true },
+    { label: "Kgyat Engine", href: "https://kgyat.com/engine-subdirectory", isExternal: true },
     { label: "KGYAT", href: "https://kgyat.com", isExternal: true },
     { label: "RVCR.tech", href: "https://rvcr.tech", isExternal: true },
     { label: "Patents", href: "/patents", isExternal: false }
