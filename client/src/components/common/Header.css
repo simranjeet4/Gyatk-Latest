@@ -238,7 +238,8 @@
   color: #CF3367;
 }
 
-.ecosystem-menu {
+.ecosystem-menu,
+.home-menu {
   width: 230px;
 }
 
@@ -439,5 +440,18 @@
   }
   .gyatk-navbar-tagline {
     font-size: 14px;
+  }
+}
+
+
+/* Desktop Hover Enhancement */
+@media (min-width: 993px) {
+  .has-dropdown:hover > .gyatk-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  .has-dropdown:hover > .dropdown-toggle-btn .dropdown-caret-icon {
+    transform: rotate(180deg);
   }
 }
