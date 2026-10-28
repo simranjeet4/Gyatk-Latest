@@ -37,6 +37,7 @@ export default function Header() {
   ];
 
   const homeDropdownLinks = [
+    { label: "Home", href: "/", isExternal: false },
     { label: "Kgyat Engine", href: "https://kgyat.com/engine-subdirectory", isExternal: true },
     { label: "KGYAT", href: "https://kgyat.com", isExternal: true },
     { label: "RVCR", href: "https://rvcr.tech/", isExternal: true },
@@ -121,14 +122,15 @@ export default function Header() {
                 onMouseEnter={() => setHomeDropdownOpen(true)}
                 onMouseLeave={() => setHomeDropdownOpen(false)}
               >
-                <Link 
-                  to="/"
+                <button 
+                  type="button"
                   className={`gyatk-nav-link dropdown-toggle-btn with-caret ${homeDropdownOpen ? 'open' : ''} ${location.pathname === '/' ? 'active' : ''}`}
-                  onClick={() => setHomeDropdownOpen(false)}
+                  onClick={() => setHomeDropdownOpen(!homeDropdownOpen)}
+                  aria-expanded={homeDropdownOpen}
                 >
                   <span>Home</span>
                   <ChevronDown size={14} className="dropdown-caret-icon" />
-                </Link>
+                </button>
 
                 <ul className={`gyatk-dropdown-menu home-menu ${homeDropdownOpen ? 'show' : ''}`}>
                   {homeDropdownLinks.map((item) => (
@@ -151,7 +153,7 @@ export default function Header() {
                           onClick={() => setHomeDropdownOpen(false)}
                         >
                           <span>{item.label}</span>
-                          <ExternalLink size={13} className="ext-icon" />
+                          {item.href !== '/' && <ExternalLink size={13} className="ext-icon" />}
                         </Link>
                       )}
                     </li>
@@ -173,8 +175,9 @@ export default function Header() {
               >
                 <button 
                   type="button"
-                  className="gyatk-nav-link dropdown-toggle-btn"
+                  className={`gyatk-nav-link dropdown-toggle-btn ${stayDropdownOpen ? 'open' : ''}`}
                   onClick={() => setStayDropdownOpen(!stayDropdownOpen)}
+                  aria-expanded={stayDropdownOpen}
                 >
                   <span>Stay on Page</span>
                 </button>
@@ -242,11 +245,6 @@ export default function Header() {
             <li className="gyatk-mobile-group">
               <span className="gyatk-mobile-group-title">Home</span>
               <ul className="gyatk-mobile-sublist">
-                <li>
-                  <Link to="/" className="gyatk-mobile-sublink" onClick={() => setMobileMenuOpen(false)}>
-                    Home Overview
-                  </Link>
-                </li>
                 {homeDropdownLinks.map((item) => (
                   <li key={item.label}>
                     {item.isExternal ? (
@@ -267,7 +265,7 @@ export default function Header() {
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         <span>{item.label}</span>
-                        <ExternalLink size={12} />
+                        {item.href !== '/' && <ExternalLink size={12} />}
                       </Link>
                     )}
                   </li>
